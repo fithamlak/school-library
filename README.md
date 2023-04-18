@@ -39,6 +39,7 @@
 ### Key Features <a name="key-features"></a>
 - Run a school library program using the command line
 - Add classes and apply Inheritance and polymorphism
+- [ ] **Use the "Decorator" design patern**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -65,7 +66,6 @@ Clone this repository to your desired folder:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ] **Use the "Decorator" design patern**
 - [ ] **set up associations**
 - [ ] **add basic UI**
 - [ ] **refactor code**
