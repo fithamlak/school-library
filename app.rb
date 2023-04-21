@@ -3,7 +3,7 @@ require './teacher'
 require './rental'
 require './book'
 
-class Ap
+class App
   attr_reader :books, :people
 
   def initialize
@@ -119,8 +119,8 @@ class Ap
     gets.chomp
   end
 
-  def create_book 
-    print 'Tittle: '
+  def create_book
+    print 'Title: '
     title = gets.chomp
     print 'Author: '
     author = gets.chomp
@@ -132,7 +132,7 @@ class Ap
   def create_rental
     return puts "Ops, we don't have any book for rent" if @books == []
     return puts "Ops, we don't have registered people who can rent books" if @people == []
-  
+
     puts 'select a book from the following list by number:'
     @books.each_with_index do |book, index|
       puts %[#{index}) Title: "#{book.title}", Author: #{book.author}]
@@ -140,7 +140,7 @@ class Ap
     selected_book = @books[gets.chomp.to_i]
     puts %(You selected "#{selected_book.title}" written by #{selected_book.author})
     puts ''
-   
+
     puts 'Select a person from the following list by number (not id):'
     @people.each_with_index do |person, index|
       puts %[#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}]
@@ -155,14 +155,15 @@ class Ap
     add_rental(entered_date, selected_book, selected_person)
     puts 'Rental created successfully!'
   end
+
   def list_rentals
     return puts "Sorry, we don't have any registered people" if @people == []
-    
+
     print 'ID of person: '
     person_id = gets.chomp.to_i
     person = @people.find { |p| p.id == person_id }
     return puts "Sorry, we don't have any person with this ID" unless person
-    
+
     if person.rentals.any?
       puts 'Rentals:'
       person.rentals.each do |rental|
@@ -176,5 +177,5 @@ class Ap
   def exit
     puts 'Thanks fo using library app - bye'
     abort
-  end 
+  end
 end
