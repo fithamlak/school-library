@@ -29,5 +29,19 @@ class Ap
         puts %(#{index + 1} - [#{person.class}] Name: #{person.name}, ID: 3{person.id}, Age: #{person.age})
       end
     end
+  end
+
+  def create_person
+    print 'what do you want to create a student (1) or a teacher (2)? [Input the your choice number]: '
+    option = gets.chomp.to_i
+    case option
+    when 1
+      create_student
+    when 2
+      create_teacher
+    else
+      puts 'please select a valid option:'
+      create_person
+    end
   end 
 end
