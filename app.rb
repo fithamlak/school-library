@@ -53,5 +53,14 @@ class Ap
     student = Student.new(age, classroom, name, parent_permission: parent_permission)
     add_student(student)
     puts 'person creatd successsfully!'
+  end
+
+  def create_teacher
+    age = gets_age
+    name = gets_name
+    specialization = gets_specialization
+    teacher = Teacher.new(age, specialization, name)
+    add_teacher(teacher)
+    puts 'person created successfully!'
   end  
 end
