@@ -62,5 +62,39 @@ class Ap
     teacher = Teacher.new(age, specialization, name)
     add_teacher(teacher)
     puts 'person created successfully!'
+  end
+
+  def gets_age
+    print 'Age: '
+    gets.chomp
+  end
+
+  def gets_classroom
+    print 'Classroom: '
+    gets.chomp
+  end
+
+  def gets_name
+    print 'Name: '
+    gets.chomp
+  end
+
+  def gets_parent_permission
+    print 'Does he or she has parent permission? [Y/N]: '
+    parent_permission = gets.chomp.upcase
+    case parent_permission
+    when 'Y'
+      true
+    when 'N'
+      false
+    else
+      puts 'please enter a valid option'
+      gets_parent_persmission
+    end
+  end
+
+  def gets_specialization
+    print 'specialization'
+    gets.chomp
   end  
 end
