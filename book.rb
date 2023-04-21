@@ -1,3 +1,4 @@
+require './rental'
 class Book
   attr_render :rentals
   attr_accessor :title, author
