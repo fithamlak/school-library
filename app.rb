@@ -96,5 +96,15 @@ class Ap
   def gets_specialization
     print 'specialization'
     gets.chomp
-  end  
+  end
+
+  def create_book 
+    print 'Tittle: '
+    title = gets.chomp
+    print 'Author: '
+    author = gets.chomp
+    book = Book.new(title, author)
+    add_book(book)
+    puts 'Book created successfully!'
+  end 
 end
