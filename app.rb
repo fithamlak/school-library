@@ -133,5 +133,22 @@ class Ap
 
     add_rental(entered_date, selected_book, selected_person)
     puts 'Rental created successfully!'
+  end
+  def list_rentals
+    return puts "Sorry, we don't have any registered people" if @people == []
+    
+    print 'ID of person: '
+    person_id = gets.chomp.to_i
+    person = @people.find { |p| p.id == person_id }
+    return puts "Sorry, we don't have any person with this ID" unless person
+    
+    if person.rentals.any?
+      puts 'Rentals:'
+      person.rentals.each do |rental|
+        puts %(Date: #{rental.date}, Book: "#{rental.book.title}" by #{rental.book.author})
+      end
+    else
+      puts "Ops, we don't have any rentals registered for #{person.name}"
+    end
   end 
 end
