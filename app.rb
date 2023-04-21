@@ -106,5 +106,32 @@ class Ap
     book = Book.new(title, author)
     add_book(book)
     puts 'Book created successfully!'
+  end
+
+  def create_rental
+    return puts "Ops, we don't have any book for rent" if @books == []
+    return puts "Ops, we don't have registered people who can rent books" if @people == []
+  
+    puts 'select a book from the following list by number:'
+    @books.each_with_index do |book, index|
+      puts %[#{index}) Title: "#{book.title}", Author: #{book.author}]
+    end
+    selected_book = @books[gets.chomp.to_i]
+    puts %(You selected "#{selected_book.title}" written by #{selected_book.author})
+    puts ''
+   
+    puts 'Select a person from the following list by number (not id):'
+    @people.each_with_index do |person, index|
+      puts %[#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}]
+    end
+    selected_person = @people[gets.chomp.to_i]
+    puts "You selected #{selected_person.name}"
+    puts ''
+
+    print 'Date: '
+    entered_date = gets.chomp
+
+    add_rental(entered_date, selected_book, selected_person)
+    puts 'Rental created successfully!'
   end 
 end
