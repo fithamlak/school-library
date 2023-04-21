@@ -43,5 +43,15 @@ class Ap
       puts 'please select a valid option:'
       create_person
     end
-  end 
+  end
+
+  def create_student
+    age = gets_age
+    name = gets_name
+    classroom = gets_classroom
+    parent_permission = gets_parent_permission
+    student = Student.new(age, classroom, name, parent_permission: parent_permission)
+    add_student(student)
+    puts 'person creatd successsfully!'
+  end  
 end
