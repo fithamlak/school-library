@@ -12,7 +12,7 @@ class App
   end
 
   def add_teacher(teacher)
-    @people.push(teacher) unless @people.include?(teacher)
+    @people.push(student) unless @people.include?(teacher)
   end
 
   def add_student(student)
