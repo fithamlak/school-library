@@ -5,10 +5,9 @@ require './options'
 class Main
   def initialize
     puts 'Welcome to School Library App!'
-     @options = Options.new
-     @app = App.new
+    @options = Options.new
+    @app = App.new
   end
-
 
   def run
     Menu.new

@@ -21,6 +21,7 @@ class App
   def list_books
     @books_list.list_books
   end
+
   def create_book
     book = Book.create_book
     @books_list.add_book(book)
@@ -35,9 +36,11 @@ class App
     @people_list.add_person(person)
     puts 'person creatd successsfully!'
   end
+
   def list_rentals
     @rentals_list.list_rentals(@people)
   end
+
   def rentals(person_id)
     person = @people.find { |p| p.id == person_id }
     person.rentals

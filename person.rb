@@ -13,6 +13,7 @@ class Person < Nameable
     @rentals = []
     @id = Random.rand(1..1000)
   end
+
   def self.create_person
     print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     selected = gets.chomp.to_i
@@ -75,7 +76,6 @@ class Person < Nameable
     print 'Specialization: '
     gets.chomp
   end
-
 
   def add_rental(book, date)
     Rental.new(date, book, self)
