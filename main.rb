@@ -1,9 +1,12 @@
 require './app'
+require './options'
+require './menu'
 
 class Main
   def initialize
     puts 'Welcome to School Library App!'
     @app = App.new
+    @options = Options.new
   end
 
   def menu
@@ -30,14 +33,13 @@ class Main
   end
 
   def run
-    puts ''
-    menu
+    Menu.new
     selected = gets.chomp.to_i
     puts ''
     puts "You choose option #{selected}"
     case selected
     when 1..7
-      @app.send(options[selected])
+      @app.send(options.get_option(selected))
     else
       puts 'Please choose a valid option:'
     end
