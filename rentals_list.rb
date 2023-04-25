@@ -9,12 +9,12 @@ class RentalsList
 
   def list_rentals(people)
     @people = people
-    return puts "Sorry, we don't have any registered people" if @people == []
+    return puts "Opps!We don't have any registered people" if @people == []
 
     print 'ID of person: '
     person_id = gets.chomp.to_i
     person = @people.find { |p| p.id == person_id }
-    return puts "Sorry, we don't have any person with this ID" unless person
+    return puts "Opps! We don't have any person with this ID" unless person
 
     if person.rentals.any?
       puts 'Rentals:'
@@ -22,7 +22,7 @@ class RentalsList
         puts %(Date: #{rental.date}, Book: "#{rental.book.title}" by #{rental.book.author})
       end
     else
-      puts "Sorry, we don't have any rentals registered for #{person.name}"
+      puts "Opps! We don't have any rentals registered for #{person.name}"
     end
   end
 
