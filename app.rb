@@ -2,12 +2,14 @@ require './student'
 require './teacher'
 require './rental'
 require './book'
+require './books_list'
 
 class App
   attr_reader :books, :people
 
   def initialize
-    @books = []
+    @books_list BooksList.new
+    @books = @books_list.books
     @people = []
   end
 
@@ -17,10 +19,6 @@ class App
 
   def add_student(student)
     @people.push(student) unless @people.include?(student)
-  end
-
-  def add_book(book)
-    @books.push(book) unless @books.include?(book)
   end
 
   def add_rental(date, book, person)
@@ -33,13 +31,11 @@ class App
   end
 
   def list_books
-    if @books == []
-      puts 'oops, the store is empty now :-('
-    else
-      @books.each_with_index do |book, index|
-        puts %(#{index + 1} - Title: "#{book.title}", Author: #{book.author})
-      end
-    end
+    @books_list.list_books
+  end
+  def create_book
+    book = Book.create_book
+    @books_list.add_book(book)
   end
 
   def list_people
@@ -117,16 +113,6 @@ class App
   def gets_specialization
     print 'specialization'
     gets.chomp
-  end
-
-  def create_book
-    print 'Title: '
-    title = gets.chomp
-    print 'Author: '
-    author = gets.chomp
-    book = Book.new(title, author)
-    add_book(book)
-    puts 'Book created successfully!'
   end
 
   def create_rental
