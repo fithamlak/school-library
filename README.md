@@ -42,6 +42,7 @@
 - [ ] **Use the "Decorator" design patern**
 - [ ] **set up associations**
 - [ ] **add basic UI**
+- [ ] **refactor code**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -68,7 +69,7 @@ Clone this repository to your desired folder:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ] **refactor code**
+
 - [ ] **preserve data**
 - [ ] **unit test**
 
@@ -82,6 +83,13 @@ Clone this repository to your desired folder:
 
 - GitHub: [@fithamlak](https://github.com/fithamlak)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/fithamlak-fikrie)
+
+👤 **Mirna Ampuero**
+
+- GitHub: [@M1rn4](https://github.com/M1rn4)
+- Twitter: [Mirna_Ampuero](https://twitter.com/_AmpueroMirna)
+- LinkedIn: [Mirna](https://www.linkedin.com/in/mirna-ampuero-caro/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
