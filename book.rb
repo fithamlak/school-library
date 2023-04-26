@@ -5,6 +5,18 @@ class Book
     @title = title
     @author = author
     @rentals = []
+    @id "#{title}_#{author}".length.to_i
+
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+  def sel.find_by_id(id)
+    @@all.find { |book| book.id == id }
+  end
   end
 
   def self.create_book

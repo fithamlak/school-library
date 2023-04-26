@@ -5,9 +5,13 @@ require './book'
 require './books_list'
 require './people_list'
 require './rentals_list'
+require './read_writer'
+require 'json'
 
 class App
   attr_reader :books, :people
+  
+  include ReaderWriter
 
   def initialize
     @books_list = BooksList.new
@@ -47,11 +51,14 @@ class App
   end
 
   def create_rental
-    rental = Rental.create_rental(@books, @people)
+    rental = Rental.create_rental
     @rentals_list.add_rental(rental)
   end
 
   def exit
+    ReadreWriter.save(@books, 'books.json') if @books.any?
+    ReadreWriter.save(@people, 'people.json') if @people.any?
+    ReadreWriter.save(@rentals, 'rentals.json') if @rentals.any?
     puts 'Thanks fo using library app - bye'
     abort
   end

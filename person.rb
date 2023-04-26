@@ -11,8 +11,19 @@ class Person < Nameable
     @parent_permission = parent_permission
     @age = age
     @rentals = []
-    @id = Random.rand(1..1000)
+    @id "#{age}_#{name}".length.to_i
+    @type = self.class
+
+    @@all << self
   end
+
+  def self.all
+    @@all
+  end
+  
+  def sel.find_by_id(id)
+    @@all.find { |person| person.id == id }
+  end 
 
   def self.create_person
     print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
