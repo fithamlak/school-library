@@ -18,6 +18,9 @@ module ReaderWriter
       data.push(object)
     end
     return if data.empty
+   
+    #handle the case when directory is not exist
+    Dir.mkdir('./data') unless File.directory?('./data')
 
     File.write("./data/3{filename}", JSON.pretty_generate(data))
   end
