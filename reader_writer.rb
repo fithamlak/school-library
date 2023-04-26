@@ -8,7 +8,7 @@ module ReaderWriter
     end
   end
 
-  def self.save(list, filename)
+  def self.save(list, _filename)
     data = []
     list.each do |item|
       object = {}
@@ -18,10 +18,10 @@ module ReaderWriter
       data.push(object)
     end
     return if data.empty
-   
-    #handle the case when directory is not exist
+
+    # handle the case when directory is not exist
     Dir.mkdir('./data') unless File.directory?('./data')
 
-    File.write("./data/3{filename}", JSON.pretty_generate(data))
+    File.write('./data/3{filename}', JSON.pretty_generate(data))
   end
 end

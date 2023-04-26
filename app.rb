@@ -10,7 +10,7 @@ require 'json'
 
 class App
   attr_reader :books, :people
-  
+
   include ReaderWriter
 
   def initialize
