@@ -11,6 +11,7 @@ class RentalsList
     rentals.map do |hash|
       rental = Rental.new(hash['date'], hash['book_id'], hash['person_id'])
       @rentals.push(rental)
+    end
   end
 
   def list_rentals(people)

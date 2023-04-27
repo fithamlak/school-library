@@ -4,13 +4,14 @@ class BooksList
   attr_accessor :books
 
   def initialize
-    @books = [book]
+    @books = []
     return unless File.exist?('./data/books.json')
     
-    books = ReadeWriter.read_file('./data/books.json')
+    books = ReaderWriter.read_file('./data/books.json')
     books.map do |book_hash|
       book = Book.new(book_hash['title'], book_hash['author'])
       @books.push(book)
+    end
   end
 
   def list_books

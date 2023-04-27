@@ -2,10 +2,10 @@ require './student'
 require './teacher'
 require './rental'
 require './book'
-require './books_list'
 require './people_list'
+require './books_list'
 require './rentals_list'
-require './read_writer'
+require './reader_writer'
 require 'json'
 
 class App
@@ -56,9 +56,9 @@ class App
   end
 
   def exit
-    ReadreWriter.save(@books, 'books.json') if @books.any?
-    ReadreWriter.save(@people, 'people.json') if @people.any?
-    ReadreWriter.save(@rentals, 'rentals.json') if @rentals.any?
+    ReaderWriter.save(@books, 'books.json') if @books.any?
+    ReaderWriter.save(@people, 'people.json') if @people.any?
+    ReaderWriter.save(@rentals, 'rentals.json') if @rentals.any?
     puts 'Thanks fo using library app - bye'
     abort
   end
