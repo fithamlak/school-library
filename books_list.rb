@@ -6,7 +6,7 @@ class BooksList
   def initialize
     @books = []
     return unless File.exist?('./data/books.json')
-    
+
     books = ReaderWriter.read_file('./data/books.json')
     books.map do |book_hash|
       book = Book.new(book_hash['title'], book_hash['author'])

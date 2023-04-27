@@ -17,7 +17,7 @@ class PeopleList
                else
                  Person.new(hash['age'], hash['name'])
                end
-      @people.push(person)               
+      @people.push(person)
     end
   end
 

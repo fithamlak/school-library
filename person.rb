@@ -21,10 +21,10 @@ class Person < Nameable
   def self.all
     @@all
   end
-  
+
   def self.find_by_id(id)
     @@all.find { |person| person.id == id }
-  end 
+  end
 
   def self.create_person
     print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
