@@ -2,6 +2,7 @@ require './nameable'
 require './rental'
 
 class Person < Nameable
+  @@all = []
   attr_accessor :name, :age
   attr_reader :id, :rentals
 
@@ -11,7 +12,18 @@ class Person < Nameable
     @parent_permission = parent_permission
     @age = age
     @rentals = []
-    @id = Random.rand(1..1000)
+    @id = "#{age}_#{name}".length.to_i
+    @type = self.class
+
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
+  def self.find_by_id(id)
+    @@all.find { |person| person.id == id }
   end
 
   def self.create_person

@@ -43,6 +43,7 @@
 - [ ] **set up associations**
 - [ ] **add basic UI**
 - [ ] **refactor code**
+- [ ] **preserve data**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -70,7 +71,6 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **preserve data**
 - [ ] **unit test**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
