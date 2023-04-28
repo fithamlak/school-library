@@ -44,6 +44,7 @@
 - [ ] **add basic UI**
 - [ ] **refactor code**
 - [ ] **preserve data**
+- [ ] **unit Test for all methods of the class**
 - [ ] **unit test**
 
 
@@ -72,8 +73,6 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 - [ ] **not planned yet**
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHOR -->
