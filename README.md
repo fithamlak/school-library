@@ -44,6 +44,7 @@
 - [ ] **add basic UI**
 - [ ] **refactor code**
 - [ ] **preserve data**
+- [ ] **unit test**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -70,8 +71,8 @@ Clone this repository to your desired folder:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
+- [ ] **not planned yet**
 
-- [ ] **unit test**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
